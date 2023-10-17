@@ -1,8 +1,6 @@
 # wedzardry-journal
 Just a Webzardry Journal
 
-# Simple MVC Example
-
 📺 Content Rendering 📺
 
 Server Side 
