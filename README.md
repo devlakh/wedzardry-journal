@@ -69,14 +69,14 @@ class and id vs data-*
     });
 
 
-☢ The fetch() API For LARAVEL ☢
+☢ The fetch() API For LARAVEL - JS Side ☢
 
     let formData = new FormData();
     formData.append("somekey","somevalue");
     fetch("{{ route('work.store') }}", {
         method: 'POST',
         body: formData,
-        headers: { 'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value, 'Content-Type': 'application/json' }
+        headers: { 'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value}
     })
     .then(response => response.json())
     .then(results => {
@@ -85,6 +85,10 @@ class and id vs data-*
     .catch(error => {
         console.error('Error:', error);
     });
+    
+☢ The fetch() API For LARAVEL - PHP Side ☢
+
+    return response(["data"=>$_POST], 200)->header('Content-Type', 'application/json');
 
 ☄ Lambda - Creating and Running a lambda Function ☄
 
